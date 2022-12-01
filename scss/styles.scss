@@ -46,6 +46,7 @@ $color_divs:rgb(16, 15, 15);
     height: 140px;
     width: 100%;
     position: fixed;
+    z-index: 100;
     }
 
     ul{
@@ -132,9 +133,7 @@ main{
         .info__uno--img{
             height: 400px;
             width: 340px;
-            position: relative;
-            left: 300px;
-            bottom: 70px;
+           
             img{
                 @extend .tamaño_100;
             }
@@ -145,9 +144,7 @@ main{
             width: 350px;
             background-color: black;
             @extend .bordes;
-            position: relative;
-            right: 100px;
-            bottom: 100px;
+           
 
             h2{
                 @extend .h2;
@@ -165,9 +162,7 @@ main{
         .info__dos--img{
             height: 400px;
             width: 340px;
-            position: relative;
-            bottom: 100px;
-            right: 65px;
+           
 
             img{
                 @extend .tamaño_100;
@@ -179,9 +174,7 @@ main{
             width: 350px;
             background-color: black;
             @extend .bordes;
-            position: relative;
-            left: 250px;
-            bottom: 50px;
+           
 
             h2{
                 @extend .h2;
@@ -325,7 +318,7 @@ main{
 
       h2{
         color: white;
-        @include fuente('Anton', sans-serif);
+        font-family: 'Anton', sans-serif;
         padding-left: 50px;
       }
         
@@ -378,7 +371,7 @@ main{
     
         h2{
             color: white;
-            @include fuente('Anton', sans-serif);
+            font-family: 'Anton', sans-serif;
             
         }
       }
@@ -408,12 +401,91 @@ footer{
         justify-content: center;
         p{
             color: white;
-            @include fuente('Libre Baskerville', serif);
+            font-family: 'Libre Baskerville', serif;
            
             
         }
     }
 }
+
+.contactos{
+    
+    display: flex;
+    justify-content: space-around;
+
+    .contactos__infos{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #contacto__wsp1{
+        display: flex;
+        display: flex;
+            align-items: center;
+            
+          svg{
+            color: green;
+            width: 60px;
+            height: 60px;
+    }
+          h2{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        padding-left: 50px;
+      }
+    
+    }
+    
+    #contacto__wsp--dos1{
+        display: flex;
+        display: flex;
+            align-items: center;
+            
+          svg{
+            color: green;
+            width: 60px;
+            height: 60px;
+    }
+          h2{
+        color: white;
+        font-family: 'Anton', sans-serif;
+        padding-left: 50px;
+      }
+    
+    }
+    
+    #contacto__inst1{
+        @extend #contacto__wsp1;
+        grid-area: info3;
+        svg{
+            color:  (rgb(174, 13, 158));
+            height: 60px;
+            width: 60px;
+        }
+    }
+    
+    #contacto__fbook1{
+        @extend #contacto__wsp1;
+        grid-area: info4;
+        svg{
+            color: blue;
+    
+        }
+    }
+    
+    .contactos__forms{
+        width: 500px;
+        
+        }
+   
+}
+
+
+
+
+
 
 @media only screen and (max-width:600px){
     .menu__img__lista{
@@ -442,15 +514,27 @@ footer{
 
     .class__info{
         grid-template-columns: 100% !important;
-        grid-template-rows:  500px 300px 300px 500px 500px 300px !important;
+        grid-template-rows:  740px 300px 300px 700px 600px 300px !important;
         grid-template-areas: "texto1"
                              "img1"
                              "img2"
                              "texto2"
                              "texto3"
                              "img3" !important;
-                             
+        justify-items: center;                     
                         
+    }
+
+    .class__info--uno{
+        width: 300px !important;    
+    }
+
+    .class__info--dos{
+        width: 300px !important;
+    }
+
+    .class__info--tres{
+        width: 300px !important;
     }
 
     .galeria{
@@ -469,13 +553,44 @@ footer{
       height: 3500px !important;                    
     }
 
-    
+    .contactos{
+        flex-direction: column;
+    }
 
-
-
+ 
 
 
 
 }
+
+@media only screen and (min-width:700px){
+   
+
+    .info__uno--img{
+        position: relative;
+        bottom: 100px;
+        left: 200px;
+    }
+
+    .info__uno--text{
+        position: relative;
+        right: 100px;
+    }
+
+    .info__dos--img{
+        position: relative;
+        bottom: 100px;
+        right: 100px;
+    }
+
+    .info__dos--text{
+        position: relative;
+        left: 200px;
+    }
+
+    
+
+
+ }
 
 

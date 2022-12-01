@@ -33,7 +33,8 @@
     display: flex;
     height: 140px;
     width: 100%;
-    position: fixed; }
+    position: fixed;
+    z-index: 100; }
   .menu ul {
     display: flex;
     justify-content: space-between;
@@ -86,30 +87,18 @@ main {
       background-color: #100f0f; }
       main .info .info__uno .info__uno--img, main .info .info__dos .info__uno--img {
         height: 400px;
-        width: 340px;
-        position: relative;
-        left: 300px;
-        bottom: 70px; }
+        width: 340px; }
       main .info .info__uno .info__uno--text, main .info .info__dos .info__uno--text {
         height: 250px;
         width: 350px;
-        background-color: black;
-        position: relative;
-        right: 100px;
-        bottom: 100px; }
+        background-color: black; }
     main .info .info__dos .info__dos--img {
       height: 400px;
-      width: 340px;
-      position: relative;
-      bottom: 100px;
-      right: 65px; }
+      width: 340px; }
     main .info .info__dos .info__dos--text {
       height: 250px;
       width: 350px;
-      background-color: black;
-      position: relative;
-      left: 250px;
-      bottom: 50px; }
+      background-color: black; }
   main .class__info {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -220,6 +209,51 @@ footer {
       color: white;
       font-family: 'Libre Baskerville', serif; }
 
+.contactos {
+  display: flex;
+  justify-content: space-around; }
+  .contactos .contactos__infos {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .contactos #contacto__wsp1, .contactos #contacto__inst1, .contactos #contacto__fbook1 {
+    display: flex;
+    display: flex;
+    align-items: center; }
+    .contactos #contacto__wsp1 svg, .contactos #contacto__inst1 svg, .contactos #contacto__fbook1 svg {
+      color: green;
+      width: 60px;
+      height: 60px; }
+    .contactos #contacto__wsp1 h2, .contactos #contacto__inst1 h2, .contactos #contacto__fbook1 h2 {
+      color: white;
+      font-family: 'Anton', sans-serif;
+      padding-left: 50px; }
+  .contactos #contacto__wsp--dos1 {
+    display: flex;
+    display: flex;
+    align-items: center; }
+    .contactos #contacto__wsp--dos1 svg {
+      color: green;
+      width: 60px;
+      height: 60px; }
+    .contactos #contacto__wsp--dos1 h2 {
+      color: white;
+      font-family: 'Anton', sans-serif;
+      padding-left: 50px; }
+  .contactos #contacto__inst1 {
+    grid-area: info3; }
+    .contactos #contacto__inst1 svg {
+      color: #ae0d9e;
+      height: 60px;
+      width: 60px; }
+  .contactos #contacto__fbook1 {
+    grid-area: info4; }
+    .contactos #contacto__fbook1 svg {
+      color: blue; }
+  .contactos .contactos__forms {
+    width: 500px; }
+
 @media only screen and (max-width: 600px) {
   .menu__img__lista {
     position: absolute !important; }
@@ -237,10 +271,35 @@ footer {
       right: 500px !important; }
   .class__info {
     grid-template-columns: 100% !important;
-    grid-template-rows: 500px 300px 300px 500px 500px 300px !important;
-    grid-template-areas: "texto1" "img1" "img2" "texto2" "texto3" "img3" !important; }
+    grid-template-rows: 740px 300px 300px 700px 600px 300px !important;
+    grid-template-areas: "texto1" "img1" "img2" "texto2" "texto3" "img3" !important;
+    justify-items: center; }
+  .class__info--uno {
+    width: 300px !important; }
+  .class__info--dos {
+    width: 300px !important; }
+  .class__info--tres {
+    width: 300px !important; }
   .galeria {
     grid-template-columns: 100% !important;
     grid-template-rows: 350px 350px 350px 350px 350px 350px 350px 350px 350px !important;
     grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8" "foto9" !important;
-    height: 3500px !important; } }
+    height: 3500px !important; }
+  .contactos {
+    flex-direction: column; } }
+
+@media only screen and (min-width: 700px) {
+  .info__uno--img {
+    position: relative;
+    bottom: 100px;
+    left: 200px; }
+  .info__uno--text {
+    position: relative;
+    right: 100px; }
+  .info__dos--img {
+    position: relative;
+    bottom: 100px;
+    right: 100px; }
+  .info__dos--text {
+    position: relative;
+    left: 200px; } }
